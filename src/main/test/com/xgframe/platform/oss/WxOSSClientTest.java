@@ -1,5 +1,6 @@
 package com.xgframe.platform.oss;
 
+import com.xgframe.platform.oss.impl.WxOSSClientImpl;
 import org.junit.Test;
 
 import java.io.FileNotFoundException;
@@ -14,13 +15,13 @@ public class WxOSSClientTest {
     @Test
     public void put() {
 
-        WxOSSClient wxOSSClient = new WxOSSClient();
+        WxOSSClient wxOSSClient = new WxOSSClientImpl();
         try {
-            tmpKey = wxOSSClient.putObject("qcheng", "test.png", "C:\\Strap\\base\\weixin\\src\\main\\test\\jp\\co\\dreamarts\\platform\\oss\\test.png");
+            tmpKey = wxOSSClient.putObject("qcheng", "test.png", "/Users/Antony/Desktop/Untitled-1.png");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        WxOSSClient wxOSSClientGet = new WxOSSClient();
+        WxOSSClient wxOSSClientGet = new WxOSSClientImpl();
         try {
             wxOSSClientGet.getObject("qcheng", "test.png");
         } catch (IOException e) {
