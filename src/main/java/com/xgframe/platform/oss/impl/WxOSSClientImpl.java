@@ -12,8 +12,8 @@ import java.io.*;
  * Created by Antony on 14-2-22.
  */
 public class WxOSSClientImpl implements WxOSSClient {
-    private String accessKeyId = "JDHrnKQb1Uezn7AM";
-    private String accessKeySecret = "EsFoonehi8fUPimGTvSPh2f6GVYNYs";
+    private String accessKeyId = "1";
+    private String accessKeySecret = "1";
 
     public void init() {
 
